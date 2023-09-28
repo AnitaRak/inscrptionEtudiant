@@ -33,6 +33,7 @@ public class BaseModele {
     }
     
     public BaseModele() {
+        
     }
     
     
