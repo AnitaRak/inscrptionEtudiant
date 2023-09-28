@@ -5,10 +5,17 @@
  */
 package entité;
 
+import config.HibernateUtil;
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Example;
 
 /**
  *
@@ -62,6 +69,27 @@ public class Etudiant extends BaseModele {
         this.adresse = adresse;
     }
 
+    
+    
+    
+    public List<Etudiant> findAll(Etudiant m) throws Exception{
+        SessionFactory sf = HibernateUtil.getSessionFactory();
+        Session s  = sf.openSession();
+        List l = new ArrayList();
+        try {
+            Example addressExample = Example.create(m);
+            Criteria criteria = s.createCriteria(m.getClass()).add(addressExample);
+            l = criteria.list();
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally{
+            s.close();
+        }
+        
+        return l;
+    }
     
     
     
