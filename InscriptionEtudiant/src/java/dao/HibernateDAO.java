@@ -55,7 +55,8 @@ public class HibernateDAO {
     }
     
     public BaseModele load(BaseModele m) throws Exception{
-        Session s  = getSf().openSession();
+        SessionFactory sf = HibernateUtil.getSessionFactory();
+        Session s  = sf.openSession();
         BaseModele mo = new BaseModele();
         try {
             mo = (BaseModele)s.get(m.getClass(),new Integer(m.getId()));

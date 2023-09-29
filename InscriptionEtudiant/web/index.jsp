@@ -22,23 +22,24 @@
         <form action="http://localhost:8080/InscriptionEtudiant/AjoutEtudiant" method="post">
             <div class="form-group">
               <label>Nom </label>
-              <input type="text" class="form-control" name="nom"  >
+              <input type="text" class="form-control" name="nom" required >
             </div>
             <div class="form-group">
               <label>Prénom</label>
-              <input type="text" class="form-control" name="prenom" >
+              <input type="text" class="form-control" name="prenom" required >
             </div>
             <div class="form-group">
               <label>Date Naissance</label>
-              <input type="date" class="form-control" name="dateNaissance" >
+              <input type="date" class="form-control" name="dateNaissance" required>
             </div>
             <div class="form-group">
               <label>Adresse</label>
-              <input type="text" class="form-control" name="adresse" >
+              <input type="text" class="form-control" name="adresse" required >
             </div>
             <button type="submit" class="btn btn-primary">Enregistrer</button>
         </form>
         </div>
+        <Strong><a href="http://localhost:8080/InscriptionEtudiant/listeEtudiant.jsp"> Voir liste des étudiants</a></Strong>
         <div class="col-md-2"></div>
     </body>
 </html>

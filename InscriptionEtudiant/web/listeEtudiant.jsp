@@ -47,13 +47,15 @@
                 </tr>
                 <% for(int i = 0 ; i< etudiants.size() ; i++ ) {%>
                 <tr>
-                  <td><a href="details-etudiant.jsp?id=<%= ((Etudiant)etudiants.get(i)).getId() %>"><%= ((Etudiant)etudiants.get(i)).getNom() %></td>
+                  <td><a href="http://localhost:8080/InscriptionEtudiant/DetailEtudiant?id=<%= ((Etudiant)etudiants.get(i)).getId() %>"><%= ((Etudiant)etudiants.get(i)).getNom() %></td>
                   <td><%= ((Etudiant)etudiants.get(i)).getPrenom() %></td>
 
                 </tr>
                 <% } %>
-
+                
             </table>
+                <br>
+                <Strong><a href="http://localhost:8080/InscriptionEtudiant/"> Retour au formulaire</a></Strong>
         </div>
         <div class="col-md-2"></div>
     </body>
