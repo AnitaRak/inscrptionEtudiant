@@ -5,6 +5,7 @@
  */
 package dao;
 
+import config.HibernateUtil;
 import entité.BaseModele;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -39,7 +40,8 @@ public class HibernateDAO {
     }
     
     public void insert(BaseModele m) throws Exception{
-        Session s  = getSf().openSession();
+        SessionFactory sf = HibernateUtil.getSessionFactory();
+        Session s  = sf.openSession();
         try {
             
             s.save(m);
@@ -57,6 +59,8 @@ public class HibernateDAO {
         BaseModele mo = new BaseModele();
         try {
             mo = (BaseModele)s.get(m.getClass(),new Integer(m.getId()));
+            
+            
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -99,7 +103,8 @@ public class HibernateDAO {
     }
     
     public List<BaseModele> findAll(BaseModele m) throws Exception{
-        Session s  = getSf().openSession();
+        SessionFactory sf = HibernateUtil.getSessionFactory();
+        Session s  = sf.openSession();
         List l = new ArrayList();
         try {
             Example addressExample = Example.create(m);
@@ -115,5 +120,7 @@ public class HibernateDAO {
         
         return l;
     }
+    
+    
     
 }

@@ -1,3 +1,4 @@
+<%@page import="dao.HibernateDAO"%>
 <%@page import="java.util.List"%>
 <%@page import="entité.Etudiant"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -29,7 +30,8 @@
     <body>
         <%
             Etudiant e = new Etudiant(); 
-            List etudiants = e.findAll(e);
+            HibernateDAO hi = new HibernateDAO();
+            List etudiants = hi.findAll(e);
         
         %>
         <br>
@@ -45,7 +47,7 @@
                 </tr>
                 <% for(int i = 0 ; i< etudiants.size() ; i++ ) {%>
                 <tr>
-                  <td><%= ((Etudiant)etudiants.get(i)).getNom() %></td>
+                  <td><a href="details-etudiant.jsp?id=<%= ((Etudiant)etudiants.get(i)).getId() %>"><%= ((Etudiant)etudiants.get(i)).getNom() %></td>
                   <td><%= ((Etudiant)etudiants.get(i)).getPrenom() %></td>
 
                 </tr>

@@ -72,7 +72,7 @@ public class Etudiant extends BaseModele {
     
     
     
-    public List<Etudiant> findAll(Etudiant m) throws Exception{
+    /*public List<Etudiant> findAll(Etudiant m) throws Exception{
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session s  = sf.openSession();
         List l = new ArrayList();
@@ -89,7 +89,19 @@ public class Etudiant extends BaseModele {
         }
         
         return l;
+    }*/
+
+    public Etudiant() {
     }
+
+    public Etudiant(String nom, String prenom, Date date_naissance, String adresse) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.date_naissance = date_naissance;
+        this.adresse = adresse;
+    }
+    
+    
     
     
     
