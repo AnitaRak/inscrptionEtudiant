@@ -1,9 +1,3 @@
-<%-- 
-    Document   : index.jsp
-    Created on : 28 sept. 2023, 18:06:14
-    Author     : Rado
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

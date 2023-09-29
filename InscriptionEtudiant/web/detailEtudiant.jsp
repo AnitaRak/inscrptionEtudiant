@@ -1,9 +1,3 @@
-<%-- 
-    Document   : detailEtudiant
-    Created on : 29 sept. 2023, 10:02:11
-    Author     : Rado
---%>
-
 <%@page import="entité.Etudiant"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

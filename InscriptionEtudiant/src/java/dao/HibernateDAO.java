@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dao;
 
 import config.HibernateUtil;
@@ -71,38 +66,7 @@ public class HibernateDAO {
         
         return mo;
     }
-    
-    public void update(BaseModele m) throws Exception{
-        Session s  = getSf().openSession();
-        Transaction t = s.beginTransaction();
-        try {
-            s.update(m);
-            t.commit();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        finally{
-            s.close();
-        }
-       
-    }
-    
-    public void delete(BaseModele m) throws Exception{
-        Session s  = getSf().openSession();
-        Transaction t = s.beginTransaction();
-        BaseModele mo = (BaseModele)s.get(m.getClass(),new Integer(m.getId()));
-        try {
-            s.delete(mo);
-            t.commit();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        finally{
-            s.close();
-        }
-       
-    }
-    
+      
     public List<BaseModele> findAll(BaseModele m) throws Exception{
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session s  = sf.openSession();
