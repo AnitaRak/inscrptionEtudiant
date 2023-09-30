@@ -36,8 +36,8 @@
         %>
         <br>
         <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
         <h2>Liste des etudiants </h2>
         <br>
             <table>
@@ -57,6 +57,6 @@
                 <br>
                 <Strong><a href="http://localhost:8080/InscriptionEtudiant/"> Retour au formulaire</a></Strong>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-4"></div>
     </body>
 </html>

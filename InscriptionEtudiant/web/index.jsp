@@ -10,9 +10,9 @@
     <body>
         <br>
         <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-        <h2>Saisie des etudiants </h2>
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+        <h2>Saisie etudiant </h2>
         <form action="http://localhost:8080/InscriptionEtudiant/AjoutEtudiant" method="post">
             <div class="form-group">
               <label>Nom </label>
@@ -34,6 +34,6 @@
         </form>
         </div>
         <Strong><a href="http://localhost:8080/InscriptionEtudiant/listeEtudiant.jsp"> Voir liste des étudiants</a></Strong>
-        <div class="col-md-2"></div>
+        <div class="col-md-4"></div>
     </body>
 </html>
